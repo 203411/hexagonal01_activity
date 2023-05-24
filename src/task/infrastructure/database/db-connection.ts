@@ -4,7 +4,7 @@ const config = {
   host: "localhost",
   port: 5432,
   user: "postgres",
-  database: "tasks",
+  database: "hexagonal_architecture",
   password: "solis2002",
 };
 

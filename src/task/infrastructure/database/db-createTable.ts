@@ -6,7 +6,7 @@ export const createTable = () => {
         DO $$
         BEGIN
             IF NOT EXISTS (SELECT 1 FROM tasks) THEN
-                INSERT INTO tasks (title, description) VALUES ('Test1', 'This is a test');
+                INSERT INTO tasks (title, description) VALUES ('Test', 'This is a test');
             END IF;
         END $$
         `,
