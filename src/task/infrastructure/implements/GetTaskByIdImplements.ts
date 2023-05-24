@@ -4,7 +4,7 @@ import { pool } from "../database/db-connection";
 
 export class GetTaskByIdImplements implements GetTaskByIdRepository {
   async getById(taskId: number): Promise<Task | null> {
-    const sql = "SELECT * FROM notes WHERE id = $1";
+    const sql = "SELECT * FROM tasks WHERE id = $1";
     const values = [taskId];
     try {
       const result = await pool.query(sql, values);
