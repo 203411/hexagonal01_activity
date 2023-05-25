@@ -11,3 +11,11 @@ export interface CreateTaskRepository {
 export interface GetAllTaskRepository {
   getAll(): Promise<Task[] | null>;
 }
+
+export interface GetTaskByTitleRepository {
+  getByTitle(taskTitle: string): Promise<Task | null>;
+}
+
+export interface DeleteTaskRepository {
+  delete(taskId: number): Promise<boolean>;
+}

@@ -9,10 +9,10 @@ export class CreateTaskController {
   async run(req: Request, res: Response) {
     const taskContent = req.body;
 
-    console.log(taskContent);
+    // console.log(taskContent);
 
     const task = await this.createTaskUseCase.run(
-      new Task(0, taskContent[0].title, taskContent[0].description)
+      new Task(0, taskContent.title, taskContent.description)
     );
     res.status(201).json(task);
   }
